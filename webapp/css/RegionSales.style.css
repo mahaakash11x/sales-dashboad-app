@@ -1,0 +1,63 @@
+/* Wrapper for region page */
+
+.productPageBackground {
+  background-color: rgb(197, 253, 232) !important;
+ 
+}
+
+
+/* Full-page background */
+.backgroundPage {
+    background: linear-gradient(to bottom, #dbeeff, #f3faff);
+    min-height: 100vh;
+  height: 6.5rem;
+    padding: 1rem 0 2rem 0;
+  }
+
+.regionPageWrapper {
+    background-color: #f8fbff;
+    padding: 4rem;
+    margin: 5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Full-width style */
+  .wideTable {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Table class */
+  .styledRegionTable {
+    width: 100%;
+  }
+  
+  /* Header text style */
+  .tableHeader {
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+  }
+  
+  
+  /* Page title */
+  .regionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #102363;
+    margin-bottom: 1.5rem;
+  }
+  .sapUiSizeCompact .sapMPageHeader .sapMIBar,.sapUiSizeCompact .sapMPageFooter .sapMIBar {
+    height: 6.5rem
+}
+.totalSalesText {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .unitsSoldText {
+    color: #007aff; /* Nice blue tone */
+    font-weight: 500;
+    font-size: 1.2rem;
+  }

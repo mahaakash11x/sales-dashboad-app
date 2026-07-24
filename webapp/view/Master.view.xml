@@ -1,0 +1,248 @@
+<mvc:View
+    controllerName="salesdashboardapp.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <SplitApp
+        id="SplitApp"
+        mode="StretchCompressMode"
+    >
+        <!-- Master Page -->
+        <masterPages>
+            <Page
+                title="Customers"
+                class="sapUiResponsivePadding"
+            >
+                <headerContent>
+                    <Button
+                        icon="sap-icon://add"
+                        text="Add Customer"
+                        press=".onOpenAddCustomerDialog"
+                    />
+                </headerContent>
+                <List
+                    id="customerList"
+                    mode="SingleSelectMaster"
+                    items="{customerModel>/}"
+                    selectionChange=".onCustomerSelect"
+                    noDataText="No customers available"
+                    class="sapUiSmallMarginTop"
+                >
+                    <items>
+                        <StandardListItem
+                            title="{customerModel>name}"
+                            description="{customerModel>contact/email}"
+                            icon="sap-icon://customer"
+                        />
+                    </items>
+                </List>
+            </Page>
+        </masterPages>
+
+        <!-- Detail Page -->
+        <detailPages>
+            <Page
+                title="Customer Details"
+                class="sapUiResponsivePadding"
+            >
+                <ObjectHeader
+                    id="objectHeader"
+                    title="{customerModel>name}"
+                    number="{customerModel>status}"
+                    numberUnit="Status"
+                    intro="Customer Overview"
+                    icon="sap-icon://person-placeholder"
+                />
+
+                <VBox
+                    class="sapUiSmallMargin sapUiResponsiveMargin"
+                    renderType="Bare"
+                >
+                    <!-- Customer Info Section -->
+                    <Panel
+                        headerText="Customer Information"
+                        expandable="true"
+                        expanded="true"
+                        class="sapUiSmallMarginBottom"
+                    >
+                        <VBox>
+                            <Text text="Name: {customerModel>name}" />
+                            <Text text="Email: {customerModel>contact/email}" />
+                            <Text
+                                text="Phone: {customerModel>contact/primary}"
+                            />
+                            <Text
+                                text="Address: {customerModel>address/street}, {customerModel>address/city}"
+                            />
+                            <Text
+                                text="Recent Purchase: {customerModel>recentPurchase/product}"
+                            />
+                            <Text
+                                text="Notes: {customerModel>salesInsights/notes}"
+                            />
+                        </VBox>
+                    </Panel>
+
+                    <!-- Product Info Section -->
+                    <Panel
+                        id="productPanel"
+                        binding="{productModel>/}"
+                        headerText="Product Info"
+                        expandable="true"
+                        expanded="true"
+                        class="sapUiSmallMarginBottom"
+                    >
+                        <VBox>
+                            <Text text="Product Name: {productModel>/name}" />
+                            <Text text="Category: {productModel>/category}" />
+                            <Text text="Price: {productModel>/price}" />
+                            <Text
+                                text="Stock Available: {productModel>/stock}"
+                            />
+                        </VBox>
+                    </Panel>
+
+                    <!-- Regional Sales Section -->
+                    <Panel
+                        id="regionPanel"
+                        binding="{regionModel>/}"
+                        headerText="Regional Sales Data"
+                        expandable="true"
+                        expanded="true"
+                    >
+                        <VBox>
+                            <Text text="Region: {regionModel>/region}" />
+                            <Text
+                                text="Top Product: {regionModel>/topProduct}"
+                            />
+                            <Text
+                                text="Total Sales: {regionModel>/totalSales}"
+                            />
+                            <Text text="Units Sold: {regionModel>/unitsSold}" />
+                        </VBox>
+                    </Panel>
+
+                    <!-- Comments Section -->
+
+                    <Panel
+                        headerText="Comments"
+                        expandable="true"
+                        expanded="true"
+                        class="sapUiSmallMarginTop"
+                    >
+                        <VBox>
+                            <!-- List of Comments -->
+                            <List
+                                id="commentList"
+                                items="{commentModel>/comments}"
+                                mode="SingleSelect"
+                                selectionChange=".onSelectComment"
+                            >
+                                <items>
+                                    <StandardListItem title="{commentModel>}" />
+                                </items>
+                            </List>
+
+                            <!-- Action Buttons -->
+                            <HBox
+                                class="sapUiTinyMarginTop"
+                                justifyContent="End"
+                            >
+                                <Button
+                                    text="Add"
+                                    icon="sap-icon://add"
+                                    press=".onAddComment"
+                                    class="sapUiTinyMarginEnd"
+                                />
+                                <Button
+                                    text="Edit"
+                                    icon="sap-icon://edit"
+                                    press=".onEditComment"
+                                    class="sapUiTinyMarginEnd"
+                                />
+                                <Button
+                                    text="Delete"
+                                    icon="sap-icon://delete"
+                                    press=".onDeleteComment"
+                                />
+                            </HBox>
+                        </VBox>
+                    </Panel>
+                </VBox>
+            </Page>
+        </detailPages>
+    </SplitApp>
+
+    <!-- Dialog for Adding Comments -->
+    <Dialog
+        id="addCommentDialog"
+        title="Add Comment"
+        draggable="true"
+        resizable="true"
+    >
+        <VBox class="sapUiContentPadding">
+            <Text text="Enter your comment below:" />
+            <TextArea
+                id="newCommentText"
+                rows="4"
+                width="100%"
+                placeholder="Type here..."
+            />
+        </VBox>
+        <beginButton>
+            <Button
+                text="Submit"
+                press="onSubmitComment"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                text="Cancel"
+                press="onCancelDialog"
+            />
+        </endButton>
+    </Dialog>
+
+    <!-- Dialog for Adding a New Customer -->
+    <Dialog
+        id="addCustomerDialog"
+        title="Add New Customer"
+        draggable="true"
+        resizable="true"
+    >
+        <VBox class="sapUiContentPadding">
+            <Input
+                id="newCustomerName"
+                placeholder="Name"
+            />
+            <Input
+                id="newCustomerEmail"
+                placeholder="Email"
+            />
+            <Input
+                id="newCustomerPhone"
+                placeholder="Phone"
+            />
+            <Input
+                id="newCustomerStreet"
+                placeholder="Street"
+            />
+            <Input
+                id="newCustomerCity"
+                placeholder="City"
+            />
+        </VBox>
+        <beginButton>
+            <Button
+                text="Add"
+                press=".onSubmitCustomer"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                text="Cancel"
+                press=".onCancelCustomerDialog"
+            />
+        </endButton>
+    </Dialog>
+</mvc:View>

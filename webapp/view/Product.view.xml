@@ -1,0 +1,89 @@
+<mvc:View
+    controllerName="salesdashboardapp.controller.Product"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <VBox
+        class="productPageWrapper  productPageBackground  sapUiContentPadding"
+    >
+        <!-- Title -->
+        <Text
+            text="Product Catalog"
+            class="productTitle"
+        />
+
+        <!-- Centered Table -->
+        <VBox class="centeredTableWrapper">
+            <Table
+                id="productTable"
+                items="{productModel>/}"
+                class="styledProductTable"
+                inset="false"
+            >
+                <columns>
+                    <Column>
+                        <Text
+                            text="Product ID"
+                            class="tableHeader"
+                        />
+                    </Column>
+                    <Column>
+                        <Text
+                            text="Name"
+                            class="tableHeader"
+                        />
+                    </Column>
+                    <Column>
+                        <Text
+                            text="Category"
+                            class="tableHeader"
+                        />
+                    </Column>
+                    <Column>
+                        <Text
+                            text="Price"
+                            class="tableHeader"
+                        />
+                    </Column>
+                    <Column>
+                        <Text
+                            text="Stock"
+                            class="tableHeader"
+                        />
+                    </Column>
+                    <Column>
+                        <Text
+                            text="Manufacturer"
+                            class="tableHeader"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier
+                                title="{productModel>productId}"
+                            />
+                            <Text
+                                text="{productModel>name}"
+                                class="coloredName"
+                            />
+                            <Text text="{productModel>category}" />
+                            <ObjectNumber
+                                number="{productModel>price}"
+                                unit="USD"
+                                state="Success"
+                            />
+                            <Text text="{productModel>stock}" />
+                            <Text
+                                text="{productModel>manufacturer}"
+                                class="manufacturerText"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                
+            </items>
+        </Table>
+        </VBox>
+    </VBox>
+</mvc:View>

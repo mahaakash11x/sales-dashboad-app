@@ -1,0 +1,152 @@
+<mvc:View
+    controllerName="salesdashboardapp.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+>
+    <Shell>
+        <App
+            id="app"
+        >
+            <VBox
+                class="sapUiContentPadding sapUiMediumMarginTop"
+                alignItems="Center"
+                justifyContent="Start"
+                width="100%"
+            >
+                <!-- Dashboard Title -->
+                <VBox
+                    alignItems="Center"
+                    class="dashboardHeader sapUiSmallMarginBottom"
+                >
+                    <Title
+                        text="📈 {i18n>appTitle}"
+                        level="H1"
+                        class="dashboardTitle"
+                    />
+                    <Text
+                        text="Track your customers, products, and regional sales all in one place."
+                        class="dashboardSubtitle"
+                    />
+                </VBox>
+
+                <!-- Grid of Cards -->
+                <HBox
+                    class="sapUiMediumMargin"
+                    justifyContent="Center"
+                    wrap="Wrap"
+                    fitContainer="true"
+                >
+                    <!-- Card 1: Customers -->
+                    <VBox
+                        width="250px"
+                        class="sapUiSmallMargin cardStyle"
+                        alignItems="Center"
+                        justifyContent="Center"
+                    >
+                        <core:Icon
+                            src="sap-icon://customer"
+                            size="3rem"
+                        />
+                        <Title
+                            text="Customers"
+                            level="H4"
+                            class="sapUiTinyMarginTop sapUiTinyMarginBottom"
+                        />
+                        <Text
+                            text="Manage customer data, purchases, and status."
+                            textAlign="Center"
+                        />
+                        <Button
+                            text="Go"
+                            press=".onNavToCustomer"
+                            class="sapUiTinyMarginTop"
+                        />
+                    </VBox>
+
+                    <!-- Card 2: Products -->
+                    <VBox
+                        width="250px"
+                        class="sapUiSmallMargin cardStyle"
+                        alignItems="Center"
+                        justifyContent="Center"
+                    >
+                        <core:Icon
+                            src="sap-icon://product"
+                            size="3rem"
+                        />
+                        <Title
+                            text="Products"
+                            level="H4"
+                            class="sapUiTinyMarginTop sapUiTinyMarginBottom"
+                        />
+                        <Text
+                            text="Browse and analyze product catalog."
+                            textAlign="Center"
+                        />
+                        <Button
+                            text="Go"
+                            press=".onNavToProduct"
+                            class="sapUiTinyMarginTop"
+                        />
+                    </VBox>
+
+                    <!-- Card 3: Region Sales -->
+                    <VBox
+                        width="250px"
+                        class="sapUiSmallMargin cardStyle"
+                        alignItems="Center"
+                        justifyContent="Center"
+                    >
+                        <core:Icon
+                            src="sap-icon://area-chart"
+                            size="3rem"
+                        />
+                        <Title
+                            text="Region Sales"
+                            level="H4"
+                            class="sapUiTinyMarginTop sapUiTinyMarginBottom"
+                        />
+                        <Text
+                            text="View regional performance and trends."
+                            textAlign="Center"
+                        />
+                        <Button
+                            text="Go"
+                            press=".onNavToRegionSales"
+                            class="sapUiTinyMarginTop"
+                        />
+                    </VBox>
+
+                    <!-- Card 4: Master Detail -->
+                    <VBox
+                        width="250px"
+                        class="sapUiSmallMargin cardStyle"
+                        alignItems="Center"
+                        justifyContent="Center"
+                    >
+                        <core:Icon
+                            src="sap-icon://navigation-right-arrow"
+                            size="3rem"
+                        />
+                        <Title
+                            text="Master-Detail View"
+                            level="H4"
+                            class="sapUiTinyMarginTop sapUiTinyMarginBottom"
+                        />
+                        <Text
+                            text="Explore customers in Master-Detail layout."
+                            textAlign="Center"
+                        />
+                        <Button
+                            text="Go"
+                            press=".onNavToMaster"
+                            class="sapUiTinyMarginTop"
+                        />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </App>
+    </Shell>
+</mvc:View>

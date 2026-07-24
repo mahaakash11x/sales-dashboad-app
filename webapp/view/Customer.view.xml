@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="salesdashboardapp.controller.Customer"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+  <VBox class="pageWrapper bigTableContainer productPageBackground sapUiContentPadding">
+
+
+        <!-- Dashboard Title -->
+        <Text
+            text="Customer Overview"
+            class="dashboardTitle"
+        />
+
+        <!-- Beautiful Table -->
+        <Table
+            id="customerTable"
+            items="{customerModel>/}"
+            class="styledTable"
+            inset="false"
+        >
+            <columns>
+                <Column><Text text="ID" class="tableHeader"/></Column>
+                <Column><Text text="Name" class="tableHeader"/></Column>
+                <Column><Text text="Status" class="tableHeader"/></Column>
+                <Column><Text text="Recent Purchase" class="tableHeader"/></Column>
+                <Column><Text text="Email" class="tableHeader"/></Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier title="{customerModel>id}" class="cellBold"/>
+                        <Text text="{customerModel>name}" class="coloredName"/>
+                        <ObjectStatus
+                            text="{customerModel>status}"
+                            state="{= ${customerModel>status} === 'Active' ? 'Success' : 'Warning'}"
+                        />
+                        <ObjectIdentifier title="{customerModel>recentPurchase/product}" />
+                        <Link text="{customerModel>contact/email}" href="mailto:{customerModel>contact/email}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+    </VBox>
+</mvc:View>

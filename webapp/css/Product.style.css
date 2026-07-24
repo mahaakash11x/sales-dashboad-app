@@ -1,0 +1,59 @@
+.productPageBackground {
+  background-color: rgb(255, 252, 187) !important;
+  min-height: 100vh; /* vh = viewport height */
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column;
+}
+
+.pageWrapper {
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+}
+
+.productTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+  text-align: left; /* Ensures the title is centered */
+  width: 100%;
+}
+
+.styledProductTable {
+  width: 100%;
+  font-size: 1.2rem; /* Changed from 5.1rem to a readable size */
+  border-collapse: collapse;
+  table-layout: auto; /* Allows table to auto-adjust based on content */
+  margin: 0 auto; /* Centers the table horizontally */
+}
+
+.tableHeader {
+  font-weight: bold;
+  color: #0d47a1;
+  font-size: 1rem;
+}
+
+.coloredName {
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.manufacturerText {
+  font-style: italic;
+  color: #4e342e;
+}
+
+.styledProductTable .sapMText,
+.styledProductTable .sapMObjectIdentifier,
+.styledProductTable .sapMObjectNumber {
+  font-size: 1.2rem;
+}

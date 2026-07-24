@@ -1,0 +1,100 @@
+
+  [
+    {
+      "id": 101,
+      "name": "John Doe",
+      "status": "gold",
+      "recentPurchase": { "product": "Laptop Pro X", "date": "2024-03-15" },
+      "activityStatus": "active",
+      "address": {
+        "street": "123 Market Street",
+        "city": "Sydney",
+        "state": "NSW",
+        "postalCode": "2000",
+        "country": "Australia"
+      },
+      
+      "contact": {
+        "primary": "+61 400 123 456",
+        "secondary": "+61 401 234 567",
+        "email": "john.doe@example.com"
+      },
+      "salesInsights": {
+        "preferredCommunication": "email",
+        "lastInteraction": "2024-03-20",
+        "notes": "Interested in premium products, prefers personalized offers."
+      }
+    },
+    {
+      "id": 102,
+      "name": "Jane Smith",
+      "status": "silver",
+      "recentPurchase": { "product": "Smartphone Ultra", "date": "2024-02-10" },
+      "activityStatus": "active",
+      "address": {
+        "street": "78 George St",
+        "city": "Melbourne",
+        "state": "VIC",
+        "postalCode": "3000",
+        "country": "Australia"
+      },
+      "contact": {
+        "primary": "+61 411 567 890",
+        "secondary": "+61 412 678 901",
+        "email": "jane.smith@example.com"
+      },
+      "salesInsights": {
+        "preferredCommunication": "phone",
+        "lastInteraction": "2024-02-15",
+        "notes": "Interested in new phone releases, open to upselling."
+      }
+    },
+    {
+      "id": 103,
+      "name": "David Lee",
+      "status": "bronze",
+      "recentPurchase": { "product": "Wireless Headphones", "date": "2023-12-20" },
+      "activityStatus": "inactive",
+      "address": {
+        "street": "42 River Road",
+        "city": "Brisbane",
+        "state": "QLD",
+        "postalCode": "4000",
+        "country": "Australia"
+      },
+      "contact": {
+        "primary": "+61 422 345 678",
+        "secondary": "+61 423 456 789",
+        "email": "david.lee@example.com"
+      },
+      "salesInsights": {
+        "preferredCommunication": "email",
+        "lastInteraction": "2023-12-25",
+        "notes": "Hasn't purchased in 3 months, might need a re-engagement offer."
+      }
+    },
+    {
+      "id": 104,
+      "name": "Sophia Wilson",
+      "status": "new",
+      "recentPurchase":  { "product": "Smartwatch Elite", "date": "2025-1-25" },
+      "activityStatus": "active",
+      "address": {
+        "street": "10 Bond Street",
+        "city": "Perth",
+        "state": "WA",
+        "postalCode": "6000",
+        "country": "Australia"
+      },
+      "contact": {
+        "primary": "+61 433 567 890",
+        "secondary": "+61 434 678 901",
+        "email": "sophia.wilson@example.com"
+      },
+      "salesInsights": {
+        "preferredCommunication": "SMS",
+        "lastInteraction": null,
+        "notes": "New lead, follow-up required."
+      }
+    }
+  ] 

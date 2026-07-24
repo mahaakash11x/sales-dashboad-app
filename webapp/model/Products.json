@@ -1,0 +1,34 @@
+[
+  {
+    "productId": "P101",
+    "name": "Laptop Pro X",
+    "category": "Electronics",
+    "price": 1650,
+    "stock": 50,
+    "manufacturer": "TechCorp"
+  },
+  {
+    "productId": "P102",
+    "name": "Smartphone Ultra",
+    "category": "Mobile Phones",
+    "price": 1400,
+    "stock": 100,
+    "manufacturer": "PhoneTech"
+  },
+  {
+    "productId": "P103",
+    "name": "Wireless Headphones",
+    "category": "Accessories",
+    "price": 260,
+    "stock": 200,
+    "manufacturer": "AudioWorld"
+  },
+  {
+    "productId": "P104",
+    "name": "Smartwatch Elite",
+    "category": "Smart Watch",
+    "price": 5000,
+    "stock": 350,
+    "manufacturer": "Apple.Inc"
+  }
+]

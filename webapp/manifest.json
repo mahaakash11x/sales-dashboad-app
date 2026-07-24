@@ -1,0 +1,133 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "salesdashboardapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.17.0",
+      "toolsId": "15977a80-70eb-459e-8bb5-65afea04643a"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.134.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "salesdashboardapp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "salesdashboardapp.view",
+        "controlId": "app", 
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+
+        {
+
+          "pattern": "",
+          "name": "App",
+          "target": "App"
+
+        },
+        {
+          "pattern": "Customer",
+          "name": "Customer",
+          "target": "Customer"
+        },
+        {
+          "pattern": "products",
+          "name": "Product",
+          "target": "Product"
+        },
+        {
+          "pattern": "regionsales",
+          "name": "RegionSales",
+          "target": "RegionSales"
+        },
+        {
+          "pattern": "master",
+          "name": "Master",
+          "target": "Master"
+        }
+        
+        
+
+      ],
+      "targets": {
+
+        "App": {
+          "viewName": "App"
+        },
+        "Customer": {
+          "viewName": "Customer"
+        },
+        "Product": {
+          "viewName": "Product"
+        },
+        "RegionSales": {
+          "viewName": "RegionSales"
+        },
+        "Master": {
+          "viewName": "Master"
+        }
+        
+        
+      }
+    },
+    "rootView": {
+      "viewName": "salesdashboardapp.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

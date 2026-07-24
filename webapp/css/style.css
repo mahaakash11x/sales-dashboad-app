@@ -1,0 +1,97 @@
+html,
+body,
+.sapUiBody,
+.sapMGlobalBackgroundColor,
+.sapMShellGlobalInnerBackground {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4) !important;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+  /* Global styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Container for the entire dashboard */
+  .dashboardContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+/* Header container */
+.dashboardHeader {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sales Dashboard main heading */
+  .dashboardTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0b3c5d;
+    padding: 4rem;
+  }
+  
+  /* Subtitle below the heading */
+  .dashboardSubtitle {
+    font-size: 1.2rem !important;
+    color: #2212d4 !important;
+    
+    margin-top: 0.5rem;
+  }
+
+/* Background gradient */
+body {
+    background: linear-gradient(to bottom right, #ccdbea, #f2f8ff);
+    font-family: "72", sans-serif;
+  }
+  
+  /* Dashboard card style */
+  .cardStyle {
+    background-color: #cdf1f1;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cardStyle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+
+  
+  /* Title text */
+  .sapMTitle {
+    color: #003366;
+  }
+  
+  /* Subtitle/Description text */
+  .sapMText {
+    color: #4a4a4a;
+    font-size: 1.2rem;
+  }
+  
+  /* Go button customization */
+  .sapMBtnInner {
+    background-color: #007aff;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .sapMBtnInner:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Footer text */
+  .footerNote {
+    font-size: 1rem;
+    color: #322f2f;
+    margin-top: 2rem;
+  }
+  

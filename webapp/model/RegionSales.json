@@ -1,0 +1,80 @@
+[
+    {
+      "region": "New South Wales",
+      "totalSales": 125000,
+      "unitsSold": 450,
+      "topProduct": "Laptop Pro X",
+      "productId": "P101",
+      "monthlySales": [
+        { "month": "2024-01", "sales": 20000 },
+        { "month": "2024-02", "sales": 25000 },
+        { "month": "2024-03", "sales": 30000 },
+        { "month": "2024-04", "sales": 40000 }
+      ],
+      "priceTrends": [
+        { "date": "2023-12-01", "price": 1500 },
+        { "date": "2024-01-01", "price": 1550 },
+        { "date": "2024-02-01", "price": 1600 },
+        { "date": "2024-03-01", "price": 1650 }
+      ]
+    },
+    {
+      "region": "Victoria",
+      "totalSales": 98000,
+      "unitsSold": 380,
+      "topProduct": "Smartphone Ultra",
+      "productId": "P102",
+      "monthlySales": [
+        { "month": "2024-01", "sales": 18000 },
+        { "month": "2024-02", "sales": 23000 },
+        { "month": "2024-03", "sales": 27000 },
+        { "month": "2024-04", "sales": 30000 }
+      ],
+      "priceTrends": [
+        { "date": "2023-12-01", "price": 1200 },
+        { "date": "2024-01-01", "price": 1250 },
+        { "date": "2024-02-01", "price": 1300 },
+        { "date": "2024-03-01", "price": 1400 }
+      ]
+    },
+    {
+      "region": "Queensland",
+      "totalSales": 75000,
+      "unitsSold": 300,
+      "topProduct": "Wireless Headphones",
+      "productId": "P103",
+      "monthlySales": [
+        { "month": "2024-01", "sales": 15000 },
+        { "month": "2024-02", "sales": 19000 },
+        { "month": "2024-03", "sales": 20000 },
+        { "month": "2024-04", "sales": 21000 }
+      ],
+      "priceTrends": [
+        { "date": "2023-12-01", "price": 200 },
+        { "date": "2024-01-01", "price": 220 },
+        { "date": "2024-02-01", "price": 240 },
+        { "date": "2024-03-01", "price": 260 }
+      ]
+    },
+    {
+      "region": "California",
+      "totalSales": 105000,
+      "unitsSold": 450,
+      "topProduct": "Smartwatch Elite",
+      "productId": "P104",
+      "monthlySales": [
+        { "month": "2024-01", "sales": 25000 },
+        { "month": "2024-02", "sales": 27000 },
+        { "month": "2024-03", "sales": 26000 },
+        { "month": "2024-04", "sales": 27000 }
+      ],
+      "priceTrends": [
+        { "date": "2023-12-01", "price": 320 },
+        { "date": "2024-01-01", "price": 330 },
+        { "date": "2024-02-01", "price": 340 },
+        { "date": "2024-03-01", "price": 350 }
+      ]
+    }
+    
+  ]
+  

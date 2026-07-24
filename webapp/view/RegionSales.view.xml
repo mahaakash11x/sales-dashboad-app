@@ -1,0 +1,81 @@
+<mvc:View
+    controllerName="salesdashboardapp.controller.RegionSales"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page class="backgroundPage">
+        <VBox class="regionPageWrapper productPageBackground sapUiContentPadding">
+            <Text
+                text="Regional Sales Report"
+                class="regionTitle"
+            />
+            <VBox class="tableContainer">
+                <Table
+                    id="regionSalesTable"
+                    items="{regionSalesModel>/}"
+                    class="styledRegionTable"
+                    inset="false"
+                >
+                    <columns>
+                        <Column>
+                            <Text
+                                text="Region"
+                                class="tableHeader"
+                            />
+                        </Column>
+                        <Column>
+                            <Text
+                                text="Total Sales"
+                                class="tableHeader"
+                            />
+                        </Column>
+                        <Column>
+                            <Text
+                                text="Units Sold"
+                                class="tableHeader"
+                            />
+                        </Column>
+                        <Column>
+                            <Text
+                                text="Top Product"
+                                class="tableHeader"
+                            />
+                        </Column>
+                        <Column>
+                            <Text
+                                text="Product ID"
+                                class="tableHeader"
+                            />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text
+                                    text="{regionSalesModel>region}"
+                                    class="tableCellText"
+                                />
+                                <Text
+                                    text="{regionSalesModel>totalSales}"
+                                    class="totalSalesText"
+                                />
+                                <Text
+                                    text="{regionSalesModel>unitsSold}"
+                                    class="unitsSoldText"
+                                />
+                                <Text
+                                    text="{regionSalesModel>topProduct}"
+                                    class="tableCellText"
+                                />
+                                <Text
+                                    text="{regionSalesModel>productId}"
+                                    class="tableCellText"
+                                />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </VBox>
+    </Page>
+</mvc:View>
